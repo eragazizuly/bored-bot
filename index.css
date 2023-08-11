@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 35vh ;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    background: linear-gradient(to right, #76b852, #8dc26f);
+}
+
+h1 {
+    color: #404e7c;
+    margin-bottom: 1em;
+}
+
+h4 {
+    color: #251F47;
+    position: absolute;
+    top: -50px;
+    animation: showActivity 0.5s ease-in-out 0.2s forwards;
+    left: 0;
+    right: 0;
+    padding: 0 1em;
+}
+
+@keyframes showActivity {
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+
+    80% {
+        top: 50vh;
+        transform: skew(10deg, -2deg) scaleY(1.1);
+    }
+
+    100% {
+        top: 43vh;
+        transform: skew(0deg, -0deg) scaleY(1);;
+    }
+}
+
+button {
+    font-family: inherit;
+    padding: 1em 4em;
+    background-color: #260F26;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 250ms;
+    margin-top: 2em;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: hsla(300, 43%, 10%, 0.8);
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+@media screen and (min-width: 500px) {
+    body {
+        margin-top: 0;
+    }
+
+    @keyframes showActivity {
+        0% {
+            top: -20px;
+            transform: skew(0deg, -5deg) scaleY(0);
+        }
+    
+        80% {
+            top: 60px;
+            transform: skew(10deg, -2deg) scaleY(1.1);
+        }
+    
+        100% {
+            top: 50px;
+            transform: skew(0deg, -0deg) scaleY(1);;
+        }
+    }
+    
+}
